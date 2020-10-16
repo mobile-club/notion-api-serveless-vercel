@@ -1,0 +1,12 @@
+{
+  "name": "notion-api-vercel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^20.1.2"
+  },
+  "dependencies": {
+    "notion-client": "^2.5.0"
+  }
+}
