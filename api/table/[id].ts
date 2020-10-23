@@ -1,9 +1,9 @@
 import { NowRequest, NowResponse } from '@vercel/node';
 
-import { fetchPageById } from '../../src/api/notion';
-import { getTableData } from '../../src/api/table';
-import { CollectionType } from '../../src/api/types';
-import { parsePageId } from '../../src/api/utils';
+import { fetchPageById } from '../../src/notion';
+import { getTableData } from '../../src/table';
+import { CollectionType } from '../../src/types';
+import { parsePageId } from '../../src/utils';
 
 const notionToken = process.env.NOTION_TOKEN || '';
 

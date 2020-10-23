@@ -1,10 +1,10 @@
 /* eslint no-loop-func: off */
 import { NowRequest, NowResponse } from '@vercel/node';
 
-import { parsePageId } from '../../src/api/utils';
-import { fetchBlocks, fetchPageById } from '../../src/api/notion';
-import { BlockType } from '../../src/api/types';
-import { getTableData } from '../../src/api/table';
+import { parsePageId } from '../../src/utils';
+import { fetchBlocks, fetchPageById } from '../../src/notion';
+import { BlockType } from '../../src/types';
+import { getTableData } from '../../src/table';
 
 const notionToken = process.env.NOTION_TOKEN || '';
 
