@@ -1,0 +1,5 @@
+.vercel
+.vscode
+.git
+
+node_modules
