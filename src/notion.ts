@@ -18,7 +18,7 @@ interface NotionParams {
 }
 
 const loadPageChunkBody = {
-  limit: 999,
+  limit: 100,
   cursor: { stack: [] },
   chunkNumber: 0,
   verticalColumns: false,
@@ -58,7 +58,7 @@ const queryCollectionBody = {
   query: { aggregations: [{ property: 'title', aggregator: 'count' }] },
   loader: {
     type: 'table',
-    limit: 999,
+    limit: 100,
     searchQuery: '',
     userTimeZone: 'Europe/Vienna',
     userLocale: 'en',
