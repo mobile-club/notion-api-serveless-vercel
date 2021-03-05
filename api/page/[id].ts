@@ -85,6 +85,6 @@ export default async (req: NowRequest, res: NowResponse) => {
     }
   }
 
-  res.setHeader('Cache-Control', 's-maxage=1, stale-while-revalidate');
+  res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate');
   return res.json(allBlocks);
 };
