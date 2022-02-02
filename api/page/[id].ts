@@ -6,6 +6,7 @@ import { fetchBlocks, fetchPageById } from '../../src/notion';
 import { BlockType } from '../../src/types';
 import { getTableData } from '../../src/table';
 
+const QUARTER_IN_SECONDS = 900;
 const notionToken = process.env.NOTION_TOKEN || '';
 
 export default async (req: NowRequest, res: NowResponse) => {
@@ -85,6 +86,9 @@ export default async (req: NowRequest, res: NowResponse) => {
     }
   }
 
-  res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate');
+  res.setHeader(
+    'Cache-Control',
+    `s-maxage=${QUARTER_IN_SECONDS}, stale-while-revalidate`
+  );
   return res.json(allBlocks);
 };
