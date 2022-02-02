@@ -5,6 +5,7 @@ import { getTableData } from '../../src/table';
 import { CollectionType } from '../../src/types';
 import { parsePageId } from '../../src/utils';
 
+const QUARTER_IN_SECONDS = 900;
 const notionToken = process.env.NOTION_TOKEN || '';
 
 export default async (req: NowRequest, res: NowResponse) => {
@@ -33,6 +34,9 @@ export default async (req: NowRequest, res: NowResponse) => {
     notionToken
   );
 
-  res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate');
+  res.setHeader(
+    'Cache-Control',
+    `s-maxage=${QUARTER_IN_SECONDS}, stale-while-revalidate`
+  );
   return res.json(rows);
 };
