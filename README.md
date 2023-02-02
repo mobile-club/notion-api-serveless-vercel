@@ -1,3 +1,7 @@
+----
+> **_NOTE:_** This project is out of use since Oct 7, 2021. It is archived on Jan, 02, 2023.
+---
+
 # Notion API Serverless Vercel
 
 Copycat of https://github.com/splitbee/notion-api-worker but to deploy on vercel
